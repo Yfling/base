@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabs</title>
+    <style>
+       .active{
+        background: #eee;
+       }
+       .tabs{
+        width: 200px;
+        height: 20px;
+        font:0;
+        padding:0;
+       }
+       .li-tab{
+        width: 50%;
+        height: 100%;
+        display:inline-block;
+        text-align: center;
+       }
+       .divTab{
+        width: 200px;height: 300px;
+       }
+    </style>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <ul class="tabs">
+        <li class="li-tab" v-for="(item,index) in tabsParam" 
+        @click="toggleTabs(index)"
+        :class="{active:index!=nowIndex}">{{item}}</li>
+    </ul>
+    <div class="divTab" v-show="nowIndex===0">我是tab1</div>
+    <div class="divTab" v-show="nowIndex===1">我是tab2</div>
+    <!-- <div class="divTab" v-show="nowIndex===2">我是tab3</div> -->
+</div>
+</body>
+</html>
+<script>
+   var app=new Vue({
+    el:'#app',
+    data:{
+        tabsParam:['tab1','tab2'],//（这个也可以用对象key，value来实现）
+        nowIndex:0,//默认第一个tab为激活状态
+    },
+    methods:{
+        toggleTabs:function(index){
+            this.nowIndex=index;
+        },
+    }
+   })
+</script>
+
+实现效果如下：
+
