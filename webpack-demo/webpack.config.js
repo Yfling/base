@@ -1,3 +1,4 @@
+const webpack = require('webpack')
 module.exports = {
   devtool: 'eval-source-map',  // source maps需要配置devtool
 
@@ -41,5 +42,8 @@ module.exports = {
         ]
       }
     ]
-  }
+  },
+  plugins: [
+      new webpack.BannerPlugin('版权所有，翻版必究')
+  ],
 };
