@@ -4,7 +4,7 @@
 ## 前端路由实现之 #hash
 先上github项目地址： spa-routers
 运行效果图
-![](https://segmentfault.com/img/bVFi7l?w=581&h=312)
+![](https://github.com/Yfling/base/tree/master/spa/gif)
 
 
 ## 背景介绍
