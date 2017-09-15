@@ -21,7 +21,12 @@
   <script src="js/tab.js"></script>
 </head>
 <body>
-  <div class="js-tab tab"> 
+  <div class="js-tab tab" data-config='{
+                                        "triggerType": "click",
+                                        "effect": "fade",
+                                        "invoke": 2,
+                                        "auto": 5000
+                                       }'>
     <ul class="tab-nav">
       <li class="actived"><a href="javascript:void(0)">新闻</a></li>
       <li><a href="#">娱乐</a></li>
