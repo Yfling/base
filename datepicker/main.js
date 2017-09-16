@@ -42,7 +42,7 @@
          return html;
    };
 
-   datepicker.init = function($dom) {
+   datepicker.init = function(input) {
      var html = datepicker.buildUi();
      //  console.log(html)
      var $wrapper = document.createElement('div');
@@ -50,5 +50,26 @@
      $wrapper.innerHTML = html;
 
      document.body.appendChild($wrapper);
+
+     var $input = document.querySelector(input);
+     var isOpen = false;
+
+     $input.addEventListener('click', function () {
+       if (isOpen) {
+         $wrapper.classList.remove('ui-datepicker-wrapper-show');
+         isOpen = false;
+       }
+       else {
+         $wrapper.classList.add('ui-datepicker-wrapper-show');
+
+         var left = $input.offsetLeft;
+         var top = $input.offseTop;
+         var height = $input.offsetHeight;
+         $wrapper.style.top = top + height + 2 + 'px';
+         $wrapper.style.left = left + 'px';
+
+         isOpen = true;
+       }
+     }, false)
    };
 })();
