@@ -3,9 +3,9 @@
 [正则笔记传送门](http://www.cnblogs.com/Yfling/p/6701270.html).
 
 **正则常用方法**
->compile：编译正则表达式
->exec：检索字符串中指定的值。返回找到的值，并确定其位置
->test：检索字符串中指定的值，返回true/false
+>compile：编译正则表达式 
+>exec：检索字符串中指定的值。返回找到的值，并确定其位置 
+>test：检索字符串中指定的值，返回true/false 
 
 
 1. 替换url中的参数
